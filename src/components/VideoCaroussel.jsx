@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
+import { useEffect, useRef, useState } from "react";
 
 import { hightlightsSlides } from "../constants";
 import { pauseImg, playImg, replayImg } from "../utils";
-gsap.registerPlugin(ScrollTrigger);
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -50,16 +50,16 @@ const VideoCarousel = () => {
 
   useEffect(() => {
     let currentProgress = 0;
-    const span = videoSpanRef.current;
+    let span = videoSpanRef.current;
 
     if (span[videoId]) {
       // animation to move the indicator
-      const anim = gsap.to(span[videoId], {
+      let anim = gsap.to(span[videoId], {
         onUpdate: () => {
           // get the progress of the video
           const progress = Math.ceil(anim.progress() * 100);
 
-          if (progress !== currentProgress) {
+          if (progress != currentProgress) {
             currentProgress = progress;
 
             // set the width of the progress bar
@@ -93,7 +93,7 @@ const VideoCarousel = () => {
         },
       });
 
-      if (videoId === 0) {
+      if (videoId == 0) {
         anim.restart();
       }
 
@@ -159,9 +159,9 @@ const VideoCarousel = () => {
     <>
       <div className="flex items-center">
         {hightlightsSlides.map((list, i) => (
-          <div key={list.id} id="slider" className="pr-10 sm:pr-20">
+          <div key={list.id} id="slider" className="sm:pr-20 pr-10">
             <div className="video-carousel_container">
-              <div className="flex-center size-full overflow-hidden rounded-3xl bg-black">
+              <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                 <video
                   id="video"
                   playsInline={true}
@@ -185,9 +185,9 @@ const VideoCarousel = () => {
                 </video>
               </div>
 
-              <div className="absolute left-[5%] top-12 z-10">
+              <div className="absolute top-12 left-[5%] z-10">
                 {list.textLists.map((text, i) => (
-                  <p key={i} className="text-xl font-medium md:text-2xl">
+                  <p key={i} className="md:text-2xl text-xl font-medium">
                     {text}
                   </p>
                 ))}
@@ -197,16 +197,16 @@ const VideoCarousel = () => {
         ))}
       </div>
 
-      <div className="flex-center relative mt-10">
-        <div className="flex-center rounded-full bg-gray-300 px-7 py-5 backdrop-blur">
+      <div className="relative flex-center mt-10">
+        <div className="flex-center py-5 px-7 bg-gray-300 backdrop-blur rounded-full">
           {videoRef.current.map((_, i) => (
             <span
               key={i}
-              className="relative mx-2 size-3 cursor-pointer rounded-full bg-gray-200"
+              className="mx-2 w-3 h-3 bg-gray-200 rounded-full relative cursor-pointer"
               ref={(el) => (videoDivRef.current[i] = el)}
             >
               <span
-                className="absolute size-full rounded-full"
+                className="absolute h-full w-full rounded-full"
                 ref={(el) => (videoSpanRef.current[i] = el)}
               />
             </span>
