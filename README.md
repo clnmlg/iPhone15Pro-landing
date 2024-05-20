@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="800" src="https://i.ibb.co/mCBQ7Ln/Capture-d-e-cran-2024-05-20-a-03-55-08.png" />
+  <img src="https://i.ibb.co/mCBQ7Ln/Capture-d-e-cran-2024-05-20-a-03-55-08.png" />
 </p>
 <p align="center">
   <img alt="GitHub followers" src="https://img.shields.io/github/followers/clnmlg?style=social">
