@@ -55,7 +55,7 @@ const Features = () => {
                 playsInline
                 id="exploreVideo"
                 className="border-radius:50px w-full h-full object-cover object-center"
-                preload
+                preload="true"
                 muted
                 autoPlay
                 ref={videoRef}
