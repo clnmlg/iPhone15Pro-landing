@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/mCBQ7Ln/Capture-d-e-cran-2024-05-20-a-03-55-08.png" />
+  <img src="https://i.ibb.co/WB4NSz9/Nouveau-projet.png" style={{border-radius: 12px 12px 12px 12px;}} />
 </p>
 
 ### About
