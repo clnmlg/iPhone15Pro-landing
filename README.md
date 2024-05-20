@@ -25,7 +25,7 @@
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Apple's iPhone 15 Pro website clone using React/ViteJS & TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.JS for displaying iPhone 15 Pro 3D models in various colors and shapes. Regarding deployment,I have chosen Vercel as a for convenience but i'm planning to make it selfhosted as I have a NAS system which would works pretty well with Dokku // Supabase.
+Apple's iPhone 15 Pro website clone using React/ViteJS & TailwindCSS. It highlights the effective use of GSAP (Greensock Animations) and Three.JS for displaying iPhone 15 Pro 3D models in various colors and shapes. Regarding deployment,I have chosen Vercel for convenience but i'm planning to make it selfhosted as I have a NAS system which would works pretty well with Dokku // Supabase.
 
 I also used Sentry for analytics in order to have a huge amount of real-time metrics such as loading time, click-through rate and so on. (see my performance score below which is pretty high thanks to a clean codebase/app-architecture...)
 
