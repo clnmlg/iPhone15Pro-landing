@@ -11,6 +11,9 @@ Sentry.init({
   _experiments: {
     metricsAggregator: true,
   },
+  sourceMapsUploadOptions: {
+    telemetry: false,
+  },
   integrations: [
     Sentry.browserTracingIntegration(),
     Sentry.reactRouterV6BrowserTracingIntegration({
